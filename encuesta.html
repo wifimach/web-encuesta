@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><link rel="manifest" href="manifest.json">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Rápida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .button {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            border-radius: 50%;
+            font-size: 14px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            line-height: 80px;
+        }
+        #irving { background-color: #3498db; }
+        #juanCarlos { background-color: #e74c3c; }
+        #gabriel { background-color: #2ecc71; }
+        #santos { background-color: #f1c40f; }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th { background-color: #f2f2f2; text-align: center; }
+        @media (max-width: 600px) {
+            .button {
+                width: 60px;
+                height: 60px;
+                font-size: 12px;
+                line-height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Encuesta Rápida</h1>
+    
+    <button id="irving" class="button" onclick="addVote('Irving')">Irving</button>
+    <button id="juanCarlos" class="button" onclick="addVote('Juan Carlos')">Juan Carlos</button>
+    <button id="gabriel" class="button" onclick="addVote('Gabriel')">Gabriel</button>
+    <button id="santos" class="button" onclick="addVote('Santos')">Santos</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Votos</th>
+            </tr>
+        </thead>
+        <tbody id="resultsTable">
+            <tr>
+                <td>Irving</td>
+                <td id="irvingVotes">0</td>
+            </tr>
+            <tr>
+                <td>Juan Carlos</td>
+                <td id="juanCarlosVotes">0</td>
+            </tr>
+            <tr>
+                <td>Gabriel</td>
+                <td id="gabrielVotes">0</td>
+            </tr>
+            <tr>
+                <td>Santos</td>
+                <td id="santosVotes">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let votes = { 'Irving': 0, 'Juan Carlos': 0, 'Gabriel': 0, 'Santos': 0 };
+        function addVote(name) {
+            votes[name]++;
+            document.getElementById(name.toLowerCase().replace(' ', '') + 'Votes').innerText = votes[name];
+        }
+    </script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+            console.log('Service Worker registrado con éxito:', registration);
+        })
+        .catch(function(error) {
+            console.log('Error al registrar el Service Worker:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ENCUESTA</title>
+</head>
+
+<body>
+</body>
+</html>

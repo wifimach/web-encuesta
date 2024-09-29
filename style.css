@@ -1,0 +1,72 @@
+/* Estilos globales para toda la página */
+body {
+    font-family: Arial, sans-serif; /* Tipo de letra para el texto */
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de los botones circulares */
+.button {
+    width: 80px;  /* Ancho del botón */
+    height: 80px; /* Alto del botón */
+    margin: 10px; /* Espaciado entre los botones */
+    border-radius: 50%; /* Hace que los botones sean circulares */
+    font-size: 14px; /* Tamaño del texto dentro del botón */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor a "puntero" al pasar sobre el botón */
+    display: inline-block; /* Hace que los botones se alineen en fila */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 80px; /* Centra el texto verticalmente */
+}
+
+/* Botón personalizado para Irving */
+#irving {
+    background-color: #3498db; /* Azul */
+}
+
+/* Botón personalizado para Juan Carlos */
+#juanCarlos {
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Botón personalizado para Gabriel */
+#gabriel {
+    background-color: #2ecc71; /* Verde */
+}
+
+/* Botón personalizado para Santos */
+#santos {
+    background-color: #f1c40f; /* Amarillo */
+}
+
+/* Estilos de la tabla de resultados */
+table {
+    margin: 20px auto; /* Centra la tabla y añade espacio superior */
+    border-collapse: collapse; /* Elimina los espacios entre celdas de la tabla */
+    width: 80%; /* Hace que la tabla ocupe el 80% del ancho de la pantalla */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Añade un borde a cada celda */
+    padding: 8px; /* Añade espacio dentro de cada celda */
+}
+
+th {
+    background-color: #f2f2f2; /* Color de fondo para los encabezados de la tabla */
+    text-align: center; /* Centra el texto en los encabezados */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .button {
+        width: 60px; /* Ajusta el ancho de los botones en pantallas pequeñas */
+        height: 60px; /* Ajusta el alto de los botones en pantallas pequeñas */
+        font-size: 12px; /* Reduce el tamaño de la fuente para los botones */
+        line-height: 60px; /* Centra verticalmente el texto en los botones pequeños */
+    }
+}
+@charset "utf-8";
+/* CSS Document */
+
